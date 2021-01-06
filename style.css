@@ -383,34 +383,32 @@
     margin: 0 16px 0;
     row-gap: 12px;
   }
-
-
 }
 
 /*Section Places*/
 
 .places {
-  margin: auto;
+  margin: 0 auto;
   max-width: 984px;
-  /*border: 1px solid red;*/
 }
 
 .place {
   padding-bottom: 80px;
   display: grid;
-  /*grid-template-columns: minmax(340px, 460px) minmax(352px, 484px);*/
-  /*grid-template-rows: minmax(92px, 152px) minmax(340px, 460px);*/
   grid-template-columns: minmax(340px, 460px) minmax(min-content, 484px);
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
-  gap: 40px 48px;
-  /*border: 1px solid red;*/
+  gap: 48px 40px;
+}
+
+.place:last-child {
+  padding-bottom: 92px;
 }
 
 .place__title {
   margin: 0;
   font-style: normal;
   font-weight: 900;
-  font-size: 4.75em;
+  font-size: 4.5em;
   line-height: 1.06;
 }
 
@@ -421,9 +419,8 @@
 .place__title-link {
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 12px;
-/* identical to box height, or 100% */
+  font-size: .75em;
+  line-height: 1;
   letter-spacing: 0.2em;
   color: #aaa;
 }
@@ -432,9 +429,8 @@
   font-style: normal;
   font-weight: normal;
   color: #ffffff;
-  font-size: 18px;
-  line-height: 22px;
-  /* identical to box height, or 122% */
+  font-size: 1.125em;
+  line-height: 1.22;
   text-decoration-line: underline;
 }
 
@@ -454,7 +450,7 @@
   margin: 0 0 26px;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 1.63;
 }
 
@@ -462,6 +458,101 @@
   margin: 0;
 }
 
+
+
+
+@media screen and (max-width: 1103px) {
+  .place {
+    grid-template-columns: minmax(440px, 460px) minmax(456px, max-content);
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+    gap: 48px 32px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .places {
+    margin: 0 48px;
+  }
+
+  .place__min-text {
+    margin: 0 0 27px;
+  }
+}
+  
+@media screen and (max-width: 1024px) {
+  .place {
+    grid-template-columns: minmax(340px, 440px) minmax(352px, 456px);
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+  }
+}
+
+
+@media screen and (max-width: 940px) {
+  .places {
+    max-width: 844px;
+    margin: 0 auto;
+  }
+  
+  .place {
+    gap: 48px 28px;
+    padding-bottom: 73px;
+  }
+
+  .place:last-child {
+    padding-bottom: 90px;
+  }
+  
+  .place__title {
+    font-size: 2.625em;
+    line-height: 1.1;
+  }
+
+  .place__min-text {
+    margin: 0 0 25px;
+    font-size: 1em;
+    line-height: 1.63;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .places {
+    margin: 0 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .place {
+    grid-template-columns: minmax(min-content, 340px) minmax(min-content, 352px);
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .places {
+    margin: 0 auto;
+  }
+  
+  .place {
+    grid-template-columns: minmax(min-content, max-content);
+    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
+    row-gap: 32px;
+    padding-bottom: 49px;
+  }
+
+  .place__website {
+    display: none;
+  }
+
+  .place__title {
+    margin: 0 16px;
+    font-size: 2em;
+    line-height: 1.09;
+  }
+
+  .place__article {
+    margin: 0 16px;
+  }
+}
 
 /*Section Cover*/
 
@@ -508,7 +599,7 @@
   color: #ffffff;
   font-style: normal;
   font-weight: 900;
-  font-size: 72px;
+  font-size: 4.5em;
   line-height: 1.06;
   text-align: center;
 }
@@ -518,9 +609,33 @@
   color: #ffffff;
   font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 1.22;
   text-align: center;
+}
+
+@media screen and (max-width: 660px) {
+  .cover__title-conteiner {
+    width: 288px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -65px;
+    margin-left: -144px;
+  }
+  
+  .cover__title {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2em;
+    line-height: 1.09;
+  }
+  .cover__subtitle {
+    width: 90%;
+    margin: 16px auto 0;
+    font-size: .875em;
+    line-height: 1.14;
+  }
 }
 
 /*Section Footer*/
@@ -567,4 +682,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.1;
+}
+
+@media screen and (max-width: 799px) {
+  .footer {
+    margin: 0 24px;
+    padding: 88px 0 24px;
+  }
 }
