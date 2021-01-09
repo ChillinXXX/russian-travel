@@ -5,6 +5,7 @@
   letter-spacing: 0.15em;
   font-weight: 400;
   font-style: normal;
+  align-self: start;
 }
 
 @media screen and (max-width: 1024px) {

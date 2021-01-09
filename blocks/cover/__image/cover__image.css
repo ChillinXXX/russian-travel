@@ -1,9 +1,0 @@
-.cover__image {
-  max-width: 100%;
-  opacity: .8;
-}
-
-.cover__link-block:hover .cover__image {
-  opacity: .3;
-  transition: .4s;
-}
