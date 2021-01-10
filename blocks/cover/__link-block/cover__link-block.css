@@ -12,6 +12,23 @@
   align-items: center;
 }
 
+.cover__link-block::before {
+  content: '';
+  width: 100%;
+  padding-bottom: 62.5%;
+  background-color: #2a2c2f;
+  opacity: .3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.cover__link-block:hover::before {
+  opacity: .8;
+  transition: .4s;
+}
+
 @media screen and (max-width: 636px) {
   .cover__link-block {
     padding-top: calc((62.5% - 129px)/2);
