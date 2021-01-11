@@ -2,7 +2,7 @@
   padding-bottom: 80px;
   display: grid;
   grid-template-columns: minmax(440px, 460px) minmax(456px, 484px);
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+  grid-template-rows: minmax(min-content, max-content);
   gap: 48px 40px;
 }
 
@@ -42,7 +42,7 @@
 @media screen and (max-width: 636px) {
   .place {
     grid-template-columns: minmax(min-content, max-content);
-    grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
+    grid-template-rows: minmax(min-content, max-content);
     row-gap: 32px;
     padding-bottom: 49px;
   }
